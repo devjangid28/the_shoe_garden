@@ -1,0 +1,122 @@
+.categories {
+  padding: 5rem 2rem;
+  background: #000;
+}
+
+.categories__inner {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.categories__title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  margin: 0 0 3rem;
+}
+
+.categories__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.categories__card {
+  text-decoration: none;
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  display: block;
+  aspect-ratio: 3 / 4;
+  cursor: pointer;
+}
+
+.categories__image-wrap {
+  position: absolute;
+  inset: 0;
+}
+
+.categories__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.categories__card:hover .categories__image {
+  transform: scale(1.08);
+}
+
+.categories__card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 30%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+}
+
+.categories__card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  z-index: 2;
+}
+
+.categories__card-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: #fff;
+  margin: 0 0 0.5rem;
+}
+
+.categories__card-desc {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 0 1rem;
+  letter-spacing: 0.5px;
+}
+
+.categories__card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+  padding-bottom: 2px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  transition: all 0.3s;
+}
+
+.categories__card:hover .categories__card-cta {
+  border-color: #fff;
+}
+
+@media (max-width: 768px) {
+  .categories {
+    padding: 3rem 1rem;
+  }
+
+  .categories__grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .categories__card {
+    aspect-ratio: 16 / 9;
+  }
+
+  .categories__card-title {
+    font-size: 1.2rem;
+  }
+}
