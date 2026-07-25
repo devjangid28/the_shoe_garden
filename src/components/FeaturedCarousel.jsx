@@ -60,6 +60,7 @@ const FeaturedCarousel = () => {
                 key={cat.id}
                 className={`featured__category-item ${i === activeIndex ? 'featured__category-item--active' : ''}`}
                 onMouseEnter={() => setActiveIndex(i)}
+                onClick={() => setActiveIndex(i)}
               >
                 <span className="featured__category-arrow">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

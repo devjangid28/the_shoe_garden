@@ -400,4 +400,9 @@
   .product-tile__price {
     font-size: 0.8rem;
   }
+
+  .product-tile__quickshop {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

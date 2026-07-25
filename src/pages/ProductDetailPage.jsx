@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { useShop } from '../context/ShopContext';
 import products from '../data/products';
 import './ProductDetailPage.css';
 
@@ -10,6 +11,7 @@ const ProductDetailPage = () => {
   const [selectedColorIdx, setSelectedColorIdx] = useState(0);
   const [selectedSize, setSelectedSize] = useState(null);
   const [addedToCart, setAddedToCart] = useState(false);
+  const { addToCart } = useShop();
 
   if (!product) {
     return (
@@ -24,6 +26,7 @@ const ProductDetailPage = () => {
 
   const handleAddToCart = () => {
     if (!selectedSize) return;
+    addToCart(product, currentColor);
     setAddedToCart(true);
     setTimeout(() => setAddedToCart(false), 2000);
   };

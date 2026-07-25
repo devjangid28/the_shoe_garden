@@ -1,6 +1,18 @@
+import { useState } from 'react';
 import './Footer.css';
 
 const Footer = () => {
+  const [email, setEmail] = useState('');
+  const [subscribed, setSubscribed] = useState(false);
+
+  const handleSubscribe = (e) => {
+    e.preventDefault();
+    if (!email || !email.includes('@')) return;
+    setSubscribed(true);
+    setEmail('');
+    setTimeout(() => setSubscribed(false), 3000);
+  };
+
   return (
     <footer className="footer">
       <div className="footer__inner">
@@ -40,18 +52,28 @@ const Footer = () => {
             <div className="footer__column">
               <h4 className="footer__column-title">Stay Connected</h4>
               <p className="footer__newsletter-text">Subscribe for exclusive drops & news</p>
-              <div className="footer__newsletter">
+              <form className="footer__newsletter" onSubmit={handleSubscribe}>
                 <input
                   type="email"
                   placeholder="Your email"
                   className="footer__newsletter-input"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
                 />
-                <button className="footer__newsletter-btn">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
-                  </svg>
+                <button className="footer__newsletter-btn" type="submit">
+                  {subscribed ? (
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                  ) : (
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+                    </svg>
+                  )}
                 </button>
-              </div>
+              </form>
+              {subscribed && <p className="footer__newsletter-success">Thanks for subscribing!</p>}
               <div className="footer__socials">
                 <a href="https://www.instagram.com/customshoes_sikar?igsh=M2I5NjA5YWJ0cnB0" target="_blank" rel="noopener noreferrer" className="footer__social" aria-label="Instagram">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

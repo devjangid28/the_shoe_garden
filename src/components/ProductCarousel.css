@@ -115,6 +115,12 @@
   transform: translateY(-4px);
 }
 
+.product-card__image-link {
+  text-decoration: none;
+  display: block;
+  color: inherit;
+}
+
 .product-card__image-wrap {
   position: relative;
   width: 100%;
@@ -344,6 +350,22 @@
 
   .product-card {
     flex: 0 0 220px;
+  }
+
+  .product-card__actions {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .product-card__action-btn--fav {
+    width: 34px;
+    height: 34px;
+    padding: 8px;
+  }
+
+  .product-card__action-btn--quickshop {
+    padding: 8px 12px;
+    font-size: 0.68rem;
   }
 
   .products__arrow--left {

@@ -103,6 +103,13 @@
   background: #e0e0e0;
 }
 
+.footer__newsletter-success {
+  font-size: 0.75rem;
+  color: #4caf50;
+  margin: 0.5rem 0 0;
+  font-weight: 500;
+}
+
 .footer__socials {
   display: flex;
   gap: 12px;

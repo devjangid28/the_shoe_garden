@@ -179,7 +179,7 @@ const BrandPage = () => {
   );
 };
 
-const ProductTile = ({ product, onQuickShop }) => {
+const ProductTile = ({ product }) => {
   const [selectedColorIdx, setSelectedColorIdx] = useState(0);
   const currentColor = product.colors[selectedColorIdx];
 

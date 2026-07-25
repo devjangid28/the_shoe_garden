@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ShopProvider } from './context/ShopContext';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import FeaturedCarousel from './components/FeaturedCarousel';
@@ -26,15 +27,17 @@ function HomePage() {
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/category/:categoryId" element={<CategoryPage />} />
-        <Route path="/product/:productId" element={<ProductDetailPage />} />
-        <Route path="/brand/:brandName" element={<BrandPage />} />
-      </Routes>
-    </Router>
+    <ShopProvider>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/category/:categoryId" element={<CategoryPage />} />
+          <Route path="/product/:productId" element={<ProductDetailPage />} />
+          <Route path="/brand/:brandName" element={<BrandPage />} />
+        </Routes>
+      </Router>
+    </ShopProvider>
   );
 }
 
