@@ -6,33 +6,50 @@ const slides = [
     id: 1,
     title: 'STEP INTO BOLD',
     subtitle: 'Make every walk your statement',
-    desktopImage: 'https://mosaic-images.goat.com/3000/d91f6b76-fa2e-496c-81f9-c03764be77db-Desktop%20(27).gif?w=1920',
+    image: 'https://mosaic-images.goat.com/3000/d91f6b76-fa2e-496c-81f9-c03764be77db-Desktop%20(27).gif?w=1920',
     mobileImage: 'https://mosaic-images.goat.com/3000/e999d2bd-b921-4498-9bf0-f4f2edebf26a-Mobile%20(26).gif?w=750',
     alt: 'Step Into Bold',
+    responsive: {
+      desktop: { objectPosition: 'center center' },
+      tablet: { objectPosition: 'center center' },
+      mobile: { objectPosition: 'center center' },
+    },
   },
   {
     id: 2,
     title: 'NEW DROPS WEEKLY',
     subtitle: 'Fresh kicks, endless possibilities',
-    desktopImage: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1920&q=80',
-    mobileImage: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=750&q=80',
+    image: '/2.jpg',
     alt: 'New Drops Weekly',
+    responsive: {
+      desktop: { objectPosition: 'center center' },
+      tablet: { objectPosition: 'center center' },
+      mobile: { objectPosition: 'center center' },
+    },
   },
   {
     id: 3,
     title: 'ELEVATE YOUR GAME',
     subtitle: 'From streets to stadiums',
-    desktopImage: 'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=1920&q=80',
-    mobileImage: 'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=750&q=80',
+    image: 'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=1920&q=80',
     alt: 'Elevate Your Game',
+    responsive: {
+      desktop: { objectPosition: 'center center' },
+      tablet: { objectPosition: 'center center' },
+      mobile: { objectPosition: 'center center' },
+    },
   },
   {
     id: 4,
     title: 'WALK YOUR WAY',
     subtitle: 'Comfort meets culture',
-    desktopImage: 'https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=1920&q=80',
-    mobileImage: 'https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=750&q=80',
+    image: '/4.jpg',
     alt: 'Walk Your Way',
+    responsive: {
+      desktop: { objectPosition: 'center center' },
+      tablet: { objectPosition: 'center center' },
+      mobile: { objectPosition: 'center center' },
+    },
   },
 ];
 
@@ -66,13 +83,15 @@ const Hero = () => {
           <div className="hero__media">
             <img
               className="hero__image hero__image--desktop"
-              src={slide.desktopImage}
+              src={slide.image}
               alt={slide.alt}
+              style={{ objectPosition: slide.responsive.desktop.objectPosition }}
             />
             <img
               className="hero__image hero__image--mobile"
-              src={slide.mobileImage}
+              src={slide.mobileImage || slide.image}
               alt={slide.alt}
+              style={{ objectPosition: slide.responsive.mobile.objectPosition }}
             />
           </div>
         </div>
