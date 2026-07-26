@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import products, { categories, allSizes, allColors } from '../data/products';
 import './CategoryPage.css';
@@ -9,6 +9,11 @@ const CategoryPage = () => {
   const [selectedSizes, setSelectedSizes] = useState([]);
   const [selectedColors, setSelectedColors] = useState([]);
   const [filterOpen, setFilterOpen] = useState(false);
+
+  useEffect(() => {
+    document.body.style.overflow = '';
+    window.scrollTo(0, 0);
+  }, []);
 
   const category = categories.find((c) => c.id === categoryId) || categories[0];
 
@@ -126,6 +131,10 @@ const ProductTile = ({ product, onQuickShop }) => {
       className="product-tile"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
+      onClick={() => onQuickShop(product.id)}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => { if (e.key === 'Enter') onQuickShop(product.id); }}
     >
       <div className="product-tile__image-wrap">
         <img
@@ -134,7 +143,7 @@ const ProductTile = ({ product, onQuickShop }) => {
           className="product-tile__image"
           loading="lazy"
         />
-        <button className={`product-tile__quickshop ${hovered ? 'product-tile__quickshop--visible' : ''}`} onClick={() => onQuickShop(product.id)}>
+        <button className={`product-tile__quickshop ${hovered ? 'product-tile__quickshop--visible' : ''}`} onClick={(e) => { e.stopPropagation(); onQuickShop(product.id); }}>
           Quick Shop
         </button>
       </div>
@@ -148,7 +157,7 @@ const ProductTile = ({ product, onQuickShop }) => {
               key={i}
               className={`product-tile__swatch ${i === selectedColorIdx ? 'product-tile__swatch--active' : ''}`}
               style={{ backgroundColor: color.hex }}
-              onClick={() => setSelectedColorIdx(i)}
+              onClick={(e) => { e.stopPropagation(); setSelectedColorIdx(i); }}
               title={color.name}
               aria-label={color.name}
             />
