@@ -9,7 +9,7 @@ const products = [
     price: 11895,
     sizes: ['UK 6', 'UK 7', 'UK 8', 'UK 9', 'UK 10', 'UK 11'],
     colors: [
-      { name: 'Infrared', hex: '#c62828', image: 'https://images.unsplash.com/photo-1610897600804-c36e2336ad3a?w=600&q=80' },
+      { name: 'Infrared', hex: '#c62828', image: '/Nike Air Max 90.jpg' },
       { name: 'White Blue', hex: '#1565c0', image: 'https://images.unsplash.com/photo-1610132835946-cecdd132ee0b?w=600&q=80' },
       { name: 'White', hex: '#f5f5f5', image: 'https://images.unsplash.com/photo-1591300393996-30d08a034554?w=600&q=80' },
     ],
@@ -24,7 +24,7 @@ const products = [
     price: 9695,
     sizes: ['UK 6', 'UK 7', 'UK 8', 'UK 9', 'UK 10'],
     colors: [
-      { name: 'Panda', hex: '#1a1a1a', image: 'https://images.unsplash.com/photo-1623684225794-a8f1f5037f5c?w=600&q=80' },
+      { name: 'Panda', hex: '#1a1a1a', image: '/Nike Dunk Low Retro.jpg' },
       { name: 'Grey', hex: '#9e9e9e', image: 'https://images.unsplash.com/photo-1584735175315-9d5df23860e6?w=600&q=80' },
       { name: 'Red Black', hex: '#b71c1c', image: 'https://images.unsplash.com/photo-1615290642882-6b9501729a27?w=600&q=80' },
     ],
@@ -39,7 +39,7 @@ const products = [
     price: 16999,
     sizes: ['UK 7', 'UK 8', 'UK 9', 'UK 10', 'UK 11'],
     colors: [
-      { name: 'Core Black', hex: '#1a1a1a', image: 'https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?w=600&q=80' },
+      { name: 'Core Black', hex: '#1a1a1a', image: '/Adidas Ultraboost.jpg' },
       { name: 'White Black', hex: '#f5f5f5', image: 'https://images.unsplash.com/photo-1519861297062-a1eec154f81a?w=600&q=80' },
     ],
   },
@@ -53,7 +53,7 @@ const products = [
     price: 8999,
     sizes: ['UK 5', 'UK 6', 'UK 7', 'UK 8', 'UK 9', 'UK 10'],
     colors: [
-      { name: 'Black', hex: '#1a1a1a', image: 'https://images.unsplash.com/photo-1715001374699-1feb736d8d57?w=600&q=80' },
+      { name: 'Black', hex: '#1a1a1a', image: '/Puma RS-X.jpg' },
       { name: 'White', hex: '#f5f5f5', image: 'https://images.unsplash.com/photo-1715003132895-b10a23d3c90f?w=600&q=80' },
     ],
   },
@@ -67,7 +67,7 @@ const products = [
     price: 8195,
     sizes: ['UK 6', 'UK 7', 'UK 8', 'UK 9', 'UK 10', 'UK 11'],
     colors: [
-      { name: 'White', hex: '#f5f5f5', image: 'https://images.unsplash.com/photo-1601144537792-c401ba4e30ba?w=600&q=80' },
+      { name: 'White', hex: '#f5f5f5', image: "/Nike Air Force 1 '07.jpg" },
       { name: 'Black', hex: '#1a1a1a', image: 'https://images.unsplash.com/photo-1608380272894-b3617f04b463?w=600&q=80' },
     ],
   },
@@ -81,7 +81,7 @@ const products = [
     price: 10999,
     sizes: ['UK 5', 'UK 6', 'UK 7', 'UK 8', 'UK 9', 'UK 10'],
     colors: [
-      { name: 'White Black', hex: '#f5f5f5', image: 'https://images.unsplash.com/photo-1718220095476-7916e897fc55?w=600&q=80' },
+      { name: 'White Black', hex: '#f5f5f5', image: '/Adidas Samba OG.jpg' },
       { name: 'White Green', hex: '#2e7d32', image: 'https://images.unsplash.com/photo-1695552835054-95b185af3d11?w=600&q=80' },
     ],
   },
@@ -95,7 +95,7 @@ const products = [
     price: 7499,
     sizes: ['UK 5', 'UK 6', 'UK 7', 'UK 8', 'UK 9'],
     colors: [
-      { name: 'Black', hex: '#1a1a1a', image: 'https://images.unsplash.com/photo-1545289414-1c3cb1c06238?w=600&q=80' },
+      { name: 'Black', hex: '#1a1a1a', image: '/Puma Suede Classic.jpg' },
       { name: 'Navy', hex: '#1a237e', image: 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=600&q=80' },
     ],
   },
@@ -109,7 +109,7 @@ const products = [
     price: 15995,
     sizes: ['UK 7', 'UK 8', 'UK 9', 'UK 10', 'UK 11'],
     colors: [
-      { name: 'Black', hex: '#1a1a1a', image: 'https://images.unsplash.com/photo-1584735175315-9d5df23860e6?w=600&q=80' },
+      { name: 'Black', hex: '#1a1a1a', image: '/Nike Air Max Plus.jpg' },
       { name: 'White', hex: '#f5f5f5', image: 'https://images.unsplash.com/photo-1603808033192-082d6919d3e1?w=600&q=80' },
     ],
   },
@@ -123,7 +123,7 @@ const products = [
     price: 14999,
     sizes: ['UK 6', 'UK 7', 'UK 8', 'UK 9', 'UK 10'],
     colors: [
-      { name: 'Core Black', hex: '#1a1a1a', image: 'https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=600&q=80' },
+      { name: 'Core Black', hex: '#1a1a1a', image: '/Adidas NMD R1.jpg' },
       { name: 'Grey', hex: '#9e9e9e', image: 'https://images.unsplash.com/photo-1597045566677-8cf032ed6634?w=600&q=80' },
     ],
   },
@@ -193,7 +193,7 @@ const products = [
     price: 13495,
     sizes: ['UK 6', 'UK 7', 'UK 8', 'UK 9', 'UK 10', 'UK 11'],
     colors: [
-      { name: 'Black White', hex: '#1a1a1a', image: 'https://images.unsplash.com/photo-1606890658317-7d14490b76fd?w=600&q=80' },
+      { name: 'Black White', hex: '#1a1a1a', image: '/Nike Pegasus 41.jpg' },
       { name: 'Blue', hex: '#1565c0', image: 'https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=600&q=80' },
     ],
   },
@@ -263,7 +263,7 @@ const products = [
     price: 17995,
     sizes: ['UK 6', 'UK 7', 'UK 8', 'UK 9', 'UK 10', 'UK 11'],
     colors: [
-      { name: 'Chicago', hex: '#b71c1c', image: 'https://images.unsplash.com/photo-1556906781-9a412961c28c?w=600&q=80' },
+      { name: 'Chicago', hex: '#b71c1c', image: '/Nike Air Jordan 1.jpg' },
       { name: 'Bred', hex: '#1a1a1a', image: 'https://images.unsplash.com/photo-1597045566677-8cf032ed6634?w=600&q=80' },
     ],
   },
@@ -277,7 +277,7 @@ const products = [
     price: 13995,
     sizes: ['UK 6', 'UK 7', 'UK 8', 'UK 9', 'UK 10', 'UK 11'],
     colors: [
-      { name: 'Black', hex: '#1a1a1a', image: 'https://images.unsplash.com/photo-1603808033192-082d6919d3e1?w=600&q=80' },
+      { name: 'Black', hex: '#1a1a1a', image: '/Nike Air Max 270.jpg' },
       { name: 'White', hex: '#f5f5f5', image: 'https://images.unsplash.com/photo-1601144537792-c401ba4e30ba?w=600&q=80' },
     ],
   },
